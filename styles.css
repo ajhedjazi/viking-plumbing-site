@@ -323,6 +323,10 @@ button { display: block; }
   .trust-strip span:last-child {
     display: none;
   }
+  .service-card-boiler,
+  .why-card-gas {
+    border-bottom-width: 0 !important;
+  }
 }
 .mobile-sticky-cta {
   padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 0.5rem);
