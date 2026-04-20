@@ -320,6 +320,9 @@ button { display: block; }
     line-height: 1.15;
     width: 100%;
   }
+  .trust-strip span:last-child {
+    display: none;
+  }
 }
 .mobile-sticky-cta {
   padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 0.5rem);
