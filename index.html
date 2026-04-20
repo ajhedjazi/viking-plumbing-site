@@ -114,6 +114,33 @@
         letter-spacing: 0.14em;
       }
     }
+    @media (max-width: 639px) {
+      body {
+        padding-bottom: 88px;
+      }
+      .brand-logo {
+        width: 148px;
+        max-height: 62px;
+      }
+      .brand-mark {
+        width: 148px;
+        min-height: 62px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+      }
+      .footer-logo {
+        width: 180px;
+      }
+      .trust-strip span {
+        font-size: 0.65rem;
+        padding: 0.45rem 0.65rem;
+        white-space: normal;
+        line-height: 1.15;
+      }
+    }
+    .mobile-sticky-cta {
+      padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 0.5rem);
+    }
     .mobile-menu { display: none; }
     .mobile-menu.show { display: block; }
   </style>
@@ -201,8 +228,8 @@
 <!-- HEADER -->
 <header class="bg-white border-b-4 border-black sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-stretch justify-between min-h-[100px] sm:min-h-[104px]">
-      <div class="flex items-center border-r-4 border-black pr-4 sm:pr-8">
+    <div class="flex flex-wrap md:flex-nowrap items-stretch justify-between min-h-[100px] sm:min-h-[104px]">
+      <div class="flex items-center border-r-4 border-black pr-3 sm:pr-8">
         <a href="#" aria-label="Viking Plumbing home" class="brand-mark">
           <img src="assets/viking-logo.png" alt="Viking Plumbing & Heating logo" class="brand-logo">
         </a>
@@ -212,10 +239,10 @@
         <a href="#why" class="uppercase text-sm font-black tracking-wider px-5 py-5 border-r-4 border-black text-black hover:bg-black hover:text-white transition-none">Why Us</a>
         <a href="#faq" class="uppercase text-sm font-black tracking-wider px-5 py-5 border-r-4 border-black text-black hover:bg-black hover:text-white transition-none">FAQ</a>
       </div>
-      <button id="navToggle" class="md:hidden flex items-center justify-center w-20 h-12 border-4 border-black text-black font-black uppercase tracking-widest hover:bg-black hover:text-white transition-none" aria-expanded="false" aria-controls="mobileMenu">
+      <button id="navToggle" class="md:hidden ml-auto flex items-center justify-center w-20 h-12 border-4 border-black text-black font-black uppercase tracking-widest hover:bg-black hover:text-white transition-none" aria-expanded="false" aria-controls="mobileMenu">
         MENU
       </button>
-      <a href="tel:01482722677" class="flex items-center px-4 sm:px-8 accent-bg border-l-4 border-black font-black uppercase text-sm sm:text-base tracking-wider text-black hover:bg-black hover:text-white transition-none">
+      <a href="tel:01482722677" class="order-3 md:order-none w-full md:w-auto justify-center md:justify-start flex items-center px-4 sm:px-8 py-4 md:py-0 accent-bg border-t-4 md:border-t-0 md:border-l-4 border-black font-black uppercase text-sm sm:text-base tracking-wider text-black hover:bg-black hover:text-white transition-none">
         <span class="hidden sm:inline">📞 01482 722 677</span>
         <span class="sm:hidden">📞 CALL</span>
       </a>
@@ -244,14 +271,14 @@
 <main>
 
 <!-- HERO -->
-<section class="bg-black min-h-screen flex items-stretch">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16 md:py-0 flex flex-col md:flex-row items-stretch">
+<section class="bg-black md:min-h-screen flex items-stretch">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 md:py-0 flex flex-col md:flex-row items-stretch">
     <!-- Left: Big headline -->
     <div class="flex-1 flex flex-col justify-center border-r-0 md:border-r-4 border-white py-12 md:py-24 pr-0 md:pr-16">
       <div class="border-4 border-white inline-block px-3 py-1 mb-6 w-fit" style="background-color:#F97316;">
         <span class="text-black font-black uppercase text-xs tracking-widest">AIR SOURCE, EMERGENCY & GENERAL PLUMBING</span>
       </div>
-      <h1 class="text-white font-black uppercase leading-none text-4xl sm:text-5xl lg:text-7xl xl:text-8xl tracking-tighter">
+      <h1 class="text-white font-black uppercase leading-none text-3xl sm:text-5xl lg:text-7xl xl:text-8xl tracking-tighter">
         EMERGENCY<br>
         PLUMBING.<br>
         <span style="color:#F97316;">BOILER</span><br>
@@ -265,10 +292,10 @@
         </p>
       </div>
       <div class="mt-10 flex flex-col sm:flex-row gap-4">
-        <a href="tel:01482722677" class="border-4 border-white text-black font-black uppercase text-lg px-8 py-5 tracking-wider hover:bg-white transition-none text-center" style="background-color:#F97316;">
+        <a href="tel:01482722677" class="border-4 border-white text-black font-black uppercase text-base sm:text-lg px-8 py-5 tracking-wider hover:bg-white transition-none text-center" style="background-color:#F97316;">
           📞 CALL NOW — 01482 722 677
         </a>
-        <a href="#book" class="border-4 border-white text-white font-black uppercase text-lg px-8 py-5 tracking-wider hover:bg-white hover:text-black transition-none text-center">
+        <a href="#book" class="border-4 border-white text-white font-black uppercase text-base sm:text-lg px-8 py-5 tracking-wider hover:bg-white hover:text-black transition-none text-center">
           BOOK ONLINE →
         </a>
       </div>
@@ -621,6 +648,17 @@
     </div>
   </div>
 </footer>
+
+<div class="mobile-sticky-cta md:hidden fixed bottom-0 inset-x-0 z-50 bg-black border-t-4 border-orange-500 px-3 pt-3">
+  <div class="flex gap-3">
+    <a href="tel:01482722677" class="flex-1 text-center border-4 border-orange-500 bg-orange-500 text-black font-black uppercase text-sm tracking-widest px-4 py-4">
+      Call Now
+    </a>
+    <a href="#book" class="flex-1 text-center border-4 border-white text-white font-black uppercase text-sm tracking-widest px-4 py-4">
+      Book Online
+    </a>
+  </div>
+</div>
 
 <script>
   const navToggle = document.getElementById('navToggle');
