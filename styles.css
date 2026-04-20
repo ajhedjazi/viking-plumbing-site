@@ -122,6 +122,25 @@ button { display: block; }
   text-transform: uppercase;
   color: #4B5563;
 }
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 0.55rem;
+  height: 2px;
+  background-color: #F97316;
+  opacity: 0;
+}
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+  opacity: 1;
+}
 .footer-logo {
   display: block;
   width: 220px;
