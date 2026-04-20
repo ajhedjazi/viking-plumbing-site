@@ -141,6 +141,15 @@ button { display: block; }
 .nav-link:focus-visible::after {
   opacity: 1;
 }
+#services,
+#why,
+#book,
+#faq {
+  scroll-margin-top: 108px;
+}
+#services {
+  scroll-margin-top: 132px;
+}
 .footer-logo {
   display: block;
   width: 220px;
@@ -168,6 +177,15 @@ button { display: block; }
 @media (max-width: 639px) {
   body {
     padding-bottom: 88px;
+  }
+  #services,
+  #why,
+  #book,
+  #faq {
+    scroll-margin-top: 92px;
+  }
+  #services {
+    scroll-margin-top: 112px;
   }
   .hero-van-bg {
     background:
