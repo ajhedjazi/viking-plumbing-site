@@ -143,6 +143,7 @@ button { display: block; }
 }
 #services,
 #work,
+#testimonials,
 #why,
 #book,
 #faq {
@@ -264,6 +265,7 @@ button { display: block; }
   }
   #services,
   #work,
+  #testimonials,
   #why,
   #book,
   #faq {
